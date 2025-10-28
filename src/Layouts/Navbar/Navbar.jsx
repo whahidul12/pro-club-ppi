@@ -138,14 +138,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav ref={navRef} className="sticky top-0 z-50 bg-white shadow">
+    <nav ref={navRef} className="bg-bg-white sticky top-0 z-50 shadow">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link
               to={"/"}
-              className="flex items-center text-xl font-bold text-indigo-600 md:text-2xl"
+              className="text-brand flex items-center text-xl font-bold md:text-2xl"
             >
               <img src={logo} alt="logo" className="w-8" />
               Programming Club
@@ -155,8 +155,12 @@ export default function Navbar() {
           {/* Desktop menu */}
           <div className="hidden items-center md:flex">
             {/* Services: wrapper region listens to pointer enter/leave */}
-            <NavLink className="px-2 py-2 font-medium">Home</NavLink>
-            <NavLink className="px-2 py-2 font-medium">Our Story</NavLink>
+            <NavLink className="text-text-primary hover:text-brand px-2 py-2 font-medium">
+              Home
+            </NavLink>
+            <NavLink className="text-text-primary hover:text-brand px-2 py-2 font-medium">
+              Our Story
+            </NavLink>
 
             {/* About: keep same pattern (no nested here but could be added similarly) */}
             <div
@@ -168,7 +172,7 @@ export default function Navbar() {
                 onClick={() => handleToggleClick("about")}
                 aria-expanded={openDropdown === "about"}
                 aria-controls="about-menu"
-                className="flex items-center px-2 py-2 font-medium text-gray-700 hover:text-indigo-600"
+                className="hover:text-brand text-text-primary flex items-center px-2 py-2 font-medium"
               >
                 Activities
                 <svg
@@ -198,19 +202,19 @@ export default function Navbar() {
               >
                 <NavLink
                   to={"/activities"}
-                  className="block px-4 py-2 text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
+                  className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
                 >
                   Current Activities
                 </NavLink>
                 <NavLink
                   to={"/activities"}
-                  className="block px-4 py-2 text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
+                  className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
                 >
                   Upcomming Activities
                 </NavLink>
                 <NavLink
                   to={"/activities"}
-                  className="block px-4 py-2 text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
+                  className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
                 >
                   Past Activities
                 </NavLink>
@@ -225,7 +229,7 @@ export default function Navbar() {
                 onClick={() => handleToggleClick("services")}
                 aria-expanded={openDropdown === "services"}
                 aria-controls="services-menu"
-                className="flex items-center px-2 py-2 font-medium text-gray-700 hover:text-indigo-600"
+                className="hover:text-brand text-text-primary flex items-center px-2 py-2 font-medium"
               >
                 Members
                 <svg
@@ -266,9 +270,9 @@ export default function Navbar() {
                     onClick={() => handleNestedToggleClick("frontend")}
                     aria-expanded={openNested === "frontend"}
                     aria-controls="frontend-menu"
-                    className="flex w-full items-center justify-between rounded-md px-4 py-2 text-left text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
+                    className="hover:text-brand text-text-primary hover:bg-bg-ice flex w-full items-center justify-between rounded-md px-4 py-2 text-left transition-colors duration-150"
                   >
-                    <span>Web Development</span>
+                    <span>Patron Council</span>
                     <svg
                       className={`h-4 w-4 transition-transform ${
                         openNested === "frontend" ? "rotate-180" : "rotate-0"
@@ -297,21 +301,15 @@ export default function Navbar() {
                   >
                     <a
                       href="#"
-                      className="block px-4 py-2 text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
+                      className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
                     >
-                      React
+                      Present (25-26)
                     </a>
                     <a
                       href="#"
-                      className="block px-4 py-2 text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
+                      className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
                     >
-                      Vue
-                    </a>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
-                    >
-                      Svelte
+                      Previous (24-25)
                     </a>
                   </div>
                 </div>
@@ -319,22 +317,34 @@ export default function Navbar() {
                 {/* Other items in main dropdown */}
                 <a
                   href="#"
-                  className="block px-4 py-2 text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
+                  className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
                 >
-                  Mobile Apps
+                  Advisory Council
                 </a>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-gray-700 transition-colors duration-150 hover:bg-indigo-50 hover:text-indigo-600"
+                  className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
                 >
-                  UI / UX Design
+                  Mentor Council
+                </a>
+                <a
+                  href="#"
+                  className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
+                >
+                  Founding Council
+                </a>
+                <a
+                  href="#"
+                  className="hover:text-brand text-text-primary hover:bg-bg-ice block px-4 py-2 transition-colors duration-150"
+                >
+                  Executive Committee
                 </a>
               </div>
             </div>
             <NavLink className="px-2 py-2 font-medium">News</NavLink>
             <NavLink
               href="#"
-              className="px-2 py-2 font-medium text-gray-700 hover:text-indigo-600"
+              className="hover:text-brand text-text-primary px-2 py-2 font-medium"
             >
               Contact
             </NavLink>
@@ -346,22 +356,22 @@ export default function Navbar() {
               onClick={() => setMobileOpen((s) => !s)}
               aria-expanded={mobileOpen}
               aria-label="Toggle menu"
-              className="inline-flex h-10 w-10 items-center justify-center"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-sm bg-[#2B7FFF]"
             >
               {/* Improved hamburger -> X: centered bars that animate cleanly */}
               <div className="relative h-6 w-6">
                 <span
-                  className={`absolute top-1/2 left-0 h-0.5 w-6 transform bg-gray-700 transition-all duration-300 ${
+                  className={`absolute top-1/2 left-0 h-0.5 w-6 transform bg-white transition-all duration-300 ${
                     mobileOpen ? "translate-y-0 rotate-45" : "-translate-y-2"
                   }`}
                 />
                 <span
-                  className={`absolute top-1/2 left-0 h-0.5 w-6 transform bg-gray-700 transition-all duration-300 ${
+                  className={`absolute top-1/2 left-0 h-0.5 w-6 transform bg-white transition-all duration-300 ${
                     mobileOpen ? "opacity-0" : "translate-y-0 opacity-100"
                   }`}
                 />
                 <span
-                  className={`absolute top-1/2 left-0 h-0.5 w-6 transform bg-gray-700 transition-all duration-300 ${
+                  className={`absolute top-1/2 left-0 h-0.5 w-6 transform bg-white transition-all duration-300 ${
                     mobileOpen ? "translate-y-0 -rotate-45" : "translate-y-2"
                   }`}
                 />
@@ -389,7 +399,7 @@ export default function Navbar() {
                 // close nested mobile when main closed
                 if (mobileSubmenu === "services") setMobileNested(null);
               }}
-              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left font-medium text-gray-700 hover:bg-indigo-50"
+              className="text-text-primary hover:bg-bg-ice flex w-full items-center justify-between rounded-md px-3 py-2 text-left font-medium"
             >
               <span>Services</span>
               <svg
@@ -422,7 +432,7 @@ export default function Navbar() {
                       mobileNested === "frontend" ? null : "frontend",
                     )
                   }
-                  className="flex w-full items-center justify-between rounded-md border-l-2 px-3 py-2 text-left font-medium text-gray-700 hover:bg-indigo-50"
+                  className="text-text-primary hover:bg-bg-ice flex w-full items-center justify-between rounded-md border-l-2 px-3 py-2 text-left font-medium"
                 >
                   <span>Web Development</span>
                   <svg
@@ -449,19 +459,19 @@ export default function Navbar() {
                 >
                   <a
                     href="#"
-                    className="block rounded-md border-l-2 px-3 py-2 text-gray-700 hover:bg-indigo-50"
+                    className="text-text-primary hover:bg-bg-ice block rounded-md border-l-2 px-3 py-2"
                   >
                     React
                   </a>
                   <a
                     href="#"
-                    className="block rounded-md border-l-2 px-3 py-2 text-gray-700 hover:bg-indigo-50"
+                    className="text-text-primary hover:bg-bg-ice block rounded-md border-l-2 px-3 py-2"
                   >
                     Vue
                   </a>
                   <a
                     href="#"
-                    className="block rounded-md border-l-2 px-3 py-2 text-gray-700 hover:bg-indigo-50"
+                    className="text-text-primary hover:bg-bg-ice block rounded-md border-l-2 px-3 py-2"
                   >
                     Svelte
                   </a>
@@ -470,13 +480,13 @@ export default function Navbar() {
 
               <a
                 href="#"
-                className="block rounded-md border-l-2 px-3 py-2 text-gray-700 hover:bg-indigo-50"
+                className="text-text-primary hover:bg-bg-ice block rounded-md border-l-2 px-3 py-2 font-medium"
               >
                 Mobile Apps
               </a>
               <a
                 href="#"
-                className="block rounded-md border-l-2 px-3 py-2 text-gray-700 hover:bg-indigo-50"
+                className="text-text-primary hover:bg-bg-ice block rounded-md border-l-2 px-3 py-2 font-medium"
               >
                 UI / UX Design
               </a>
@@ -489,7 +499,7 @@ export default function Navbar() {
               onClick={() =>
                 setMobileSubmenu(mobileSubmenu === "about" ? null : "about")
               }
-              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left font-medium text-gray-700 hover:bg-indigo-50"
+              className="text-text-primary hover:bg-bg-ice flex w-full items-center justify-between rounded-md px-3 py-2 text-left font-medium"
             >
               <span>About</span>
               <svg
@@ -516,19 +526,19 @@ export default function Navbar() {
             >
               <a
                 href="#"
-                className="block rounded-md px-3 py-2 text-gray-700 hover:bg-indigo-50"
+                className="text-text-primary hover:bg-bg-ice block rounded-md px-3 py-2 font-medium"
               >
                 Company
               </a>
               <a
                 href="#"
-                className="block rounded-md px-3 py-2 text-gray-700 hover:bg-indigo-50"
+                className="text-text-primary hover:bg-bg-ice block rounded-md px-3 py-2 font-medium"
               >
                 Team
               </a>
               <a
                 href="#"
-                className="block rounded-md px-3 py-2 text-gray-700 hover:bg-indigo-50"
+                className="text-text-primary hover:bg-bg-ice block rounded-md px-3 py-2 font-medium"
               >
                 Careers
               </a>
@@ -537,7 +547,7 @@ export default function Navbar() {
 
           <NavLink
             href="#"
-            className="block rounded-md px-3 py-2 text-gray-700 hover:bg-indigo-50"
+            className="text-text-primary hover:bg-bg-ice block rounded-md px-3 py-2 font-medium"
           >
             Contact
           </NavLink>

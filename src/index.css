@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+    --color-brand: #0A71E4;
+    --color-brand-light: #31C4F6;
+    --color-bg-ice: #E0F5FA;
+    --color-bg-white: #FFF;
+    --color-card-white: #DEDEDE;
+    --color-text-primary: #001931;
+    --color-text-secondary: #627382;
+}
